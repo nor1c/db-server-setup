@@ -3,7 +3,6 @@
 - [Links](https://github.com/nor1c/db-server-setup#-links)
 - [Database Optimization](https://github.com/nor1c/db-server-setup#-database-optimization)
 
-<hr>
 
 ## # Basic Commands
 - Find where MySQL `my.cnf` is located
@@ -11,7 +10,6 @@
 # find / -name my.cnf
 ```
 
-<hr>
 
 ## # Links
 
@@ -74,3 +72,38 @@ or add `max_connections` to `my.cnf`
 max_connections=2000
 ```
 
+### # Configure MySQL thread_cache_size
+
+The `thread_cache_size` directive sets the amount of threads that your server should cache. As the client disconnects, his threads are put in the cache if they are less than the `thread_cache_size`. Further requests are completed by using the threads stored in the cache.
+
+To improve your performance you can set the `thread_cache_size` to a relatively high number. To find the thread cache hit rate, you can use the following technique:
+```
+mysql> show status like 'Threads_created';
+mysql> show status like 'Connections';
+```
+
+Now use the following formula to calculate the thread cache hit rate percentage:
+```
+100 - ((Threads_created / Connections) * 100)
+```
+or (based on [this article](https://releem.com/docs/mysql-performance-tuning/thread_cache_size))
+```
+8 + (max_connections / 100)
+```
+
+If you get a low number, it means that most of the new mysql connections are starting new thread instead of loading from cache. You will surely want to increase the thread_cache_size in such cases.
+
+The good thing here is that the `thread_cache_size` can be dynamically changed without having to restart the MySQL service. You can achieve this by running:
+```
+mysql> set global thread_cache_size = 16;
+```
+or add `thread_cache_size` to `my.cnf`
+```
+...
+thread_cache_size=16
+```
+
+<br>
+
+Other articles that talks about **thread_cache_size**:
+- https://releem.com/docs/mysql-performance-tuning/thread_cache_size
