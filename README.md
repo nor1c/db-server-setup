@@ -1,7 +1,7 @@
 ## Table of Content
-- [Basic Commands](https://github.com/nor1c/db-server-setup/README.md#-basic-commands)
-- [Links](https://github.com/nor1c/db-server-setup/README.md#-links)
-- [Database Optimization](https://github.com/nor1c/db-server-setup/README.md#-database-optimization)
+- [Basic Commands](https://github.com/nor1c/db-server-setup#-basic-commands)
+- [Links](https://github.com/nor1c/db-server-setup#-links)
+- [Database Optimization](https://github.com/nor1c/db-server-setup#-database-optimization)
 
 <hr>
 
