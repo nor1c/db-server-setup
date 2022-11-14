@@ -21,6 +21,7 @@
 - And for the networking, this tutorial may be helpful http://www.yolinux.com/TUTORIALS/LinuxTutorialNetworking.html
 - Releem docs https://releem.com/docs/getstarted
 - MySQL Performance Parameters https://releem.com/docs/mysql-performance-parameters
+- Monitor MySQL database performance with New Relic https://newrelic.com/blog/how-to-relic/how-to-monitor-mysql
 
 <br>
 
