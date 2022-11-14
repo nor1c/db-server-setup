@@ -200,10 +200,12 @@ There are plenty of tools available for benchmarking, but I would like to sugges
 To download and run it, use the following set of commands:
 
 ```
-# wget https://github.com/major/MySQLTuner-perl/tarball/master
-# tar xf master
-# cd major-MySQLTuner-perl-993bc18/
-# ./mysqltuner.pl 
+# wget https://github.com/major/MySQLTuner-perl/tarball/master MySQLTuner
+# tar xf MySQLTuner
+# cd major-MySQLTuner-perl-xxxxxxx
+# ./mysqltuner.pl
+or
+# perl mysqltuner.pl --host targetDNS_IP --user admin_user --pass admin_password
 ```
 
 You will receive a detailed report about your MySQL usage and recommendation tips. Here is a sample output of default MariaDB installation:
