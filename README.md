@@ -3,6 +3,7 @@
 - [Links](https://github.com/nor1c/db-server-setup#-links)
 - [Database Optimization](https://github.com/nor1c/db-server-setup#-database-optimization)
 
+<hr>
 
 ## # Basic Commands
 - Find where MySQL `my.cnf` is located
@@ -10,6 +11,7 @@
 # find / -name my.cnf
 ```
 
+<br>
 
 ## # Links
 
@@ -20,6 +22,7 @@
 - Releem docs https://releem.com/docs/getstarted
 - MySQL Performance Parameters https://releem.com/docs/mysql-performance-parameters
 
+<br>
 
 ## # Database Optimization
 
